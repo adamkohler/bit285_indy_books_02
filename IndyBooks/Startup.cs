@@ -27,6 +27,7 @@ namespace IndyBooks
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<Models.BookStuff>();
             services.AddDbContext<Models.IndyBooksDataContext>(options =>
             {
                 var connectionString = configuration.GetConnectionString("IndyBooks");
